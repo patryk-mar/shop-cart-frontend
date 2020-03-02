@@ -23,7 +23,7 @@
     };
     
     // Disable the button until we have Stripe set up on the page
-    document.querySelector("button").disabled = true;
+    //document.querySelector("button").disabled = true;
     fetch("https://chat-maryn-demo.herokuapp.com/create-payment-intent", {
     method: "POST",
     headers: {
@@ -39,7 +39,7 @@
       return setupElements(data);
     })
     .then(function({ stripe, card, clientSecret }) {
-      //document.querySelector("button").disabled = false;
+      document.querySelector("button").disabled = false;
     
       // Handle form submission.
       var form = document.getElementById("payment-form");

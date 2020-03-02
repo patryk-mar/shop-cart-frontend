@@ -47,7 +47,7 @@ body: JSON.stringify(orderData)
   return setupElements(data);
 })
 .then(function({ stripe, card, clientSecret }) {
-  //document.querySelector("button").disabled = false;
+  document.querySelector("button").disabled = false;
 
   // Handle form submission.
   var form = document.getElementById("payment-form");
