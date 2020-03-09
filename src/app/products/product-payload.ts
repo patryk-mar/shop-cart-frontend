@@ -1,6 +1,7 @@
 export class ProductPayload{
-    id: String;
+    id: number;
     name: String;
+    imageUrl: String;
     description: String;
     price: number;
   }

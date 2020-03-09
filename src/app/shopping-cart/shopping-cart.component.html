@@ -1,0 +1,31 @@
+<div class="container">
+    
+    <!--<div *ngFor="let item of items | async"> --->
+        <div class="card-columns"> 
+            <div class="card">
+                <div class="card-body">
+                 <h5 class="card-title">Total: £ {{ total }}</h5>
+                 <a type="button" href="/proceed" class="blog-title btn btn-primary">Proceed to pay</a>
+                </div>
+            </div>
+        </div>
+        <div class="card-columns">     
+
+            
+             <div class="card" style="" *ngFor="let item of items">
+                 <div class="card-body">
+                 <h5 class="card-title">Name: {{ item.productName }}</h5>
+                 <p class="card-text">Price: £ {{ item.productPrice }}</p>
+                 <p class="card-text">Quantity: {{ item.quantity }}</p>
+                 <button class="btn btn-primary" (click)="addToCard(item)" >Add to card  </button>
+                 <button class="btn btn-primary" [disabled]="item.quantity == 0" 
+                 (click)="removeFromCard(item)" >Remove from card</button>
+                 </div>
+             </div>   
+      
+ 
+ </div>
+ <!--{{ cardProduct.name }} --->
+ </div>
+
+ 

@@ -1,15 +1,19 @@
 
 <div class="container">
-   <!-- <div *ngFor="let product of products | async"> 
-<div class="row">
-            <div class="card col-md-4" style="width: 18rem;">
+       <div class="card-columns" >
+
+            <div class="card border-1" style="margin-top:20px;" *ngFor="let product of products | async" >
+                <img src="{{ product.imageUrl }}"  class="mx-auto img-fluid" alt="logo"> 
                 <div class="card-body">
                 <h5 class="card-title">{{ product.name }}</h5>
-                <p class="card-text">{{ product.description }}.</p>
-                <a href="#" class="btn btn-primary">Go somewhere </a>
+                <p class="card-text">{{ product.description }}</p>
+                <p class="card-text">£ {{ product.price }}</p>
+                <button class="btn btn-primary" (click)="addToCard($event, product)" >Add to card   
+                </button>
+                <button class="btn btn-primary" 
+                (click)="removeFromCard($event, product)" >Remove </button>
                 </div>
-            </div>   
-      </div>            
-</div> -->
-<!--{{ cardProduct.name }} --->
+            </div> 
+            
+         </div>
 </div>
