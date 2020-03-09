@@ -16,9 +16,8 @@ export class ProductService {
   cartId: string;
   constructor(private httpClient: HttpClient, private cookieService: CookieService) { }
   private _refreshNeeded$ = new Subject<void>();
-  //url = 'https://chat-maryn-demo.herokuapp.com';
   url = 'https://shopping-cart-maryn.herokuapp.com';
-  //url = 'http://localhost:8080'
+  //url = 'http://localhost:8080';
 
    get refreshNeeded$(){
     return this._refreshNeeded$;  
